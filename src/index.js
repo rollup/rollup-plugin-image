@@ -1,0 +1,27 @@
+import { readFileSync } from 'fs';
+import { extname } from 'path';
+import { createFilter } from 'rollup-pluginutils';
+
+const mimeTypes = {
+	'.jpg':  'image/jpeg',
+	'.jpeg': 'image/jpeg',
+	'.png':  'image/png',
+	'.gif':  'image/gif',
+	'.svg':  'image/svg+xml'
+};
+
+export default function image ( options = {} ) {
+	const filter = createFilter( options.include, options.exclude );
+
+	return {
+		load ( id ) {
+			if ( !filter( id ) ) return null;
+
+			const mime = mimeTypes[ extname( id ) ];
+			if ( !mime ) return null; // not an image
+
+			const data = readFileSync( id, 'base64' );
+			return `var img = new Image(); img.src = 'data:${mime};base64,${data}'; export default img;`;
+		}
+	};
+}
