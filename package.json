@@ -1,9 +1,10 @@
 {
   "name": "rollup-plugin-image",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Import JPG, PNG, GIF and SVG images",
   "main": "dist/rollup-plugin-image.cjs.js",
   "jsnext:main": "dist/rollup-plugin-image.es.js",
+  "files": [ "src", "dist", "README.md" ],
   "dependencies": {
     "rollup-pluginutils": "^1.3.1"
   },
