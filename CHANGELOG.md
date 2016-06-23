@@ -1,5 +1,9 @@
 # rollup-plugin-image
 
+## 1.0.2
+
+* Return a `name`
+
 ## 1.0.1
 
 * Fix `pkg.files`

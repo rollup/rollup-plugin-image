@@ -14,6 +14,8 @@ export default function image ( options = {} ) {
 	const filter = createFilter( options.include, options.exclude );
 
 	return {
+		name: 'image',
+
 		load ( id ) {
 			if ( !filter( id ) ) return null;
 
