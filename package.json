@@ -22,10 +22,7 @@
     "lint": "eslint src",
     "prepublish": "npm run lint && npm test && npm run build:es"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rollup/rollup-plugin-image.git"
-  },
+  "repository": "rollup/rollup-plugin-image",
   "keywords": [
     "rollup",
     "modules",
