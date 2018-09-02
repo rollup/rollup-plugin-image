@@ -23,17 +23,7 @@ export default function image ( options = {} ) {
 			if ( !mime ) return null; // not an image
 
 			const data = readFileSync( id, 'base64' );
-			const code = `var img = new Image(); img.src = 'data:${mime};base64,${data}'; export default img;`;
-
-			const ast = {
-				type: 'Program',
-				sourceType: 'module',
-				start: 0,
-				end: null,
-				body: []
-			};
-
-			return { ast, code, map: { mappings: '' } };
+			return `var img = new Image(); img.src = 'data:${mime};base64,${data}'; export default img;`;
 		}
 	};
 }
