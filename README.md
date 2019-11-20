@@ -1,6 +1,6 @@
-# Moving
+# Moved
 
-This plugin is being moved to a new home. Please stand by...
+This module has moved and is now available at [@rollup/plugin-image](https://github.com/rollup/plugins). Please update your dependencies. This repository is no longer maintained.
 
 # rollup-plugin-image
 
