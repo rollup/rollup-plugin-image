@@ -1,3 +1,7 @@
+# Moving
+
+This plugin is being moved to a new home. Please stand by...
+
 # rollup-plugin-image
 
 Import JPG, PNG, GIF and SVG files.
